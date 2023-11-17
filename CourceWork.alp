@@ -655,7 +655,7 @@
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[1000
+								<Code><![CDATA[300
 ]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
@@ -904,7 +904,7 @@
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[100
+								<Code><![CDATA[300
 ]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
@@ -1248,7 +1248,7 @@
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[900
+								<Code><![CDATA[300
 ]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
@@ -1463,7 +1463,7 @@
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[500
+								<Code><![CDATA[300
 ]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
@@ -54336,7 +54336,7 @@
     			<TimeStackChart>
 					<Id>1700072007739</Id>
 					<Name><![CDATA[chart]]></Name>
-					<X>5960</X><Y>2900</Y>
+					<X>6040</X><Y>3120</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -54386,7 +54386,7 @@
 					<Id>1700072008439</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-8097537</Color>
-					<Expression2><![CDATA[road.nCars(false)
+					<Expression2><![CDATA[(road.nCars(false)+road.nCars(true))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
@@ -54449,8 +54449,9 @@
 					<Id>1700227089089</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-23296</Color>
-					<Expression2><![CDATA[(road72.nCars(false)+road2.nCars(false))
-]]></Expression2>
+					<Expression2><![CDATA[((road72.nCars(false)+road2.nCars(false))
++(road72.nCars(true)+road2.nCars(true))
+)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
 					</DatasetExpression>
@@ -54462,7 +54463,7 @@
     			<TimeStackChart>
 					<Id>1700227150259</Id>
 					<Name><![CDATA[chart2]]></Name>
-					<X>5640</X><Y>2900</Y>
+					<X>5500</X><Y>3000</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -54511,8 +54512,9 @@
 					<Id>1700227151248</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-12004916</Color>
-					<Expression2><![CDATA[(road1.nCars(false)+road68.nCars(false))
-]]></Expression2>
+					<Expression2><![CDATA[((road1.nCars(false)+road68.nCars(false))
++(road1.nCars(true)+road68.nCars(true))
+)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
 					</DatasetExpression>
@@ -54573,9 +54575,11 @@
 					<Id>1700227295121</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-13447886</Color>
-					<Expression2><![CDATA[(road3.nCars(false)+road93.nCars(false)
+					<Expression2><![CDATA[((road3.nCars(false)+road93.nCars(false)
 +road95.nCars(false)+road104.nCars(false))
-]]></Expression2>
++(road3.nCars(true)+road93.nCars(true)
++road95.nCars(true)+road104.nCars(true))
+)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
 					</DatasetExpression>
@@ -54636,8 +54640,9 @@
 					<Id>1700230224388</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-12799119</Color>
-					<Expression2><![CDATA[(road8.nCars(false)+road89.nCars(false))
-]]></Expression2>
+					<Expression2><![CDATA[((road8.nCars(false)+road89.nCars(false))
++(road8.nCars(true)+road89.nCars(true))
+)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
 					</DatasetExpression>
@@ -54649,7 +54654,7 @@
     			<TimeStackChart>
 					<Id>1700230295568</Id>
 					<Name><![CDATA[chart5]]></Name>
-					<X>7480</X><Y>3820</Y>
+					<X>7400</X><Y>3960</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -54698,12 +54703,12 @@
 					<Id>1700230297034</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-29696</Color>
-					<Expression2><![CDATA[road22.nCars(false)
+					<Expression2><![CDATA[(road22.nCars(false)+road22.nCars(true))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
 					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
+					<SamplesToKeep>1000</SamplesToKeep>
 					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
 					<VerScaleType>AUTO</VerScaleType>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
@@ -54711,7 +54716,7 @@
     			<TimeStackChart>
 					<Id>1700230487629</Id>
 					<Name><![CDATA[chart6]]></Name>
-					<X>7000</X><Y>3740</Y>
+					<X>6840</X><Y>3920</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -54822,8 +54827,10 @@
 					<Id>1700230532220</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-4343957</Color>
-					<Expression2><![CDATA[(road130.nCars(false)+road91.nCars(false)
-+road16.nCars(false))
+					<Expression2><![CDATA[((road130.nCars(false)+road91.nCars(false)
++road16.nCars(false))+
+(road130.nCars(true)+road91.nCars(true)
++road16.nCars(true)))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
@@ -54885,8 +54892,9 @@
 					<Id>1700231271934</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-7667573</Color>
-					<Expression2><![CDATA[(road10.nCars(false)+road87.nCars(false))
-]]></Expression2>
+					<Expression2><![CDATA[((road10.nCars(false)+road87.nCars(false))
++(road10.nCars(true)+road87.nCars(true)
+))]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
 					</DatasetExpression>
@@ -54947,7 +54955,7 @@
 					<Id>1700231326771</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-9807155</Color>
-					<Expression2><![CDATA[road19.nCars(false)
+					<Expression2><![CDATA[(road19.nCars(false)+road19.nCars(true))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
@@ -55009,7 +55017,7 @@
 					<Id>1700231353539</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-3137392</Color>
-					<Expression2><![CDATA[road18.nCars(false)
+					<Expression2><![CDATA[(road18.nCars(false)+road18.nCars(true))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
@@ -55071,8 +55079,9 @@
 					<Id>1700231379157</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-6632142</Color>
-					<Expression2><![CDATA[(road17.nCars(false)+road132.nCars(false))
-]]></Expression2>
+					<Expression2><![CDATA[((road17.nCars(false)+road132.nCars(false))
++(road17.nCars(true)+road132.nCars(true))
+)]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
 					</DatasetExpression>
@@ -55133,11 +55142,16 @@
 					<Id>1700231477267</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-4343957</Color>
-					<Expression2><![CDATA[(road5.nCars(false)+
+					<Expression2><![CDATA[((road5.nCars(false)+
 road108.nCars(false)+
 road102.nCars(false)+
 road99.nCars(false)+
-road97.nCars(false))
+road97.nCars(false))+
+(road5.nCars(true)+
+road108.nCars(true)+
+road102.nCars(true)+
+road99.nCars(true)+
+road97.nCars(true)))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
@@ -55199,7 +55213,7 @@ road97.nCars(false))
 					<Id>1700231796880</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-9728477</Color>
-					<Expression2><![CDATA[road9.nCars(false)
+					<Expression2><![CDATA[(road9.nCars(false)+road9.nCars(true))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
@@ -55212,7 +55226,7 @@ road97.nCars(false))
     			<TimeStackChart>
 					<Id>1700231843666</Id>
 					<Name><![CDATA[chart14]]></Name>
-					<X>5980</X><Y>3820</Y>
+					<X>6040</X><Y>3720</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -55261,7 +55275,8 @@ road97.nCars(false))
 					<Id>1700231844828</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-2354116</Color>
-					<Expression2><![CDATA[(road11.nCars(false)+road4.nCars(false))
+					<Expression2><![CDATA[((road11.nCars(false)+road4.nCars(false))
++(road11.nCars(true)+road4.nCars(true)))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
@@ -55274,7 +55289,7 @@ road97.nCars(false))
     			<TimeStackChart>
 					<Id>1700231915835</Id>
 					<Name><![CDATA[chart15]]></Name>
-					<X>5560</X><Y>3860</Y>
+					<X>5520</X><Y>3800</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -55323,7 +55338,7 @@ road97.nCars(false))
 					<Id>1700231917057</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-6632142</Color>
-					<Expression2><![CDATA[13
+					<Expression2><![CDATA[(road13.nCars(false)+road13.nCars(true))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
@@ -55389,7 +55404,12 @@ road97.nCars(false))
 road114.nCars(false)+
 road112.nCars(false)+
 road15.nCars(false)+
-road110.nCars(false))
+road110.nCars(false))+
+(road116.nCars(true)+
+road114.nCars(true)+
+road112.nCars(true)+
+road15.nCars(true)+
+road110.nCars(true))
 ]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Title]]></Title>
